@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Divyanshu Raj</title>
+  <p class="tagline">Frontend Developer | Web Designer</p>
+  <style>
+    :root{
+      --accent:#0b6cff;
+      --bg:#f5f7f8;
+      --text:#222;
+      --muted:#555;
+      --max-width:1000px;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--text);background:var(--bg);line-height:1.5}
+    .container{width:calc(100% - 2rem);max-width:var(--max-width);margin:0 auto;padding:2rem 0}
+    .site-header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:10}
+    .header-inner{display:flex;align-items:center;justify-content:space-between}
+    .brand h1{margin:0;font-size:1.25rem}
+    .main-nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
+    .about{display:flex;align-items:center;gap:1.25rem}
+    .profile-photo{width:120px;height:120px;border-radius:12px;object-fit:cover;border:1px solid #ddd}
+    .skills-list{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none}
+    .skills-list li{background:#f5f7ff;padding:.4rem .7rem;border-radius:999px;font-weight:600;color:var(--accent)}
+    .project{display:flex;gap:1rem;align-items:flex-start;margin:1.25rem 0}
+    .project img{width:200px;height:120px;object-fit:cover;border-radius:6px}
+    .project-links a{margin-right:.5rem;text-decoration:none;color:var(--accent)}
+    .contact-form{display:flex;flex-direction:column;gap:.75rem;margin-top:1rem}
+    .contact-form input,.contact-form textarea{width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px}
+    .contact-form button{padding:.6rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:4px;cursor:pointer}
+    .site-footer{border-top:1px solid #eee;padding:1rem 0;text-align:center;color:var(--muted)}
+    @media(max-width:720px){
+      .about{flex-direction:column;text-align:center}
+      .project{flex-direction:column}
+      .main-nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Your Name</h1>
+        <p class="tagline">Frontend Developer</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="about" class="about container">
+      <img src="profile.jpg" alt="Your Name" class="profile-photo">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm a web developer focused on creating modern, responsive website. I enjoy turning ideas into functional and visually appealing designs.</p>
+      </div>
+    </section>
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+    <section id="projects" class="projects container">
+      <h2>Projects</h2>
+      <article class="project">
+        <img src="https://via.placeholder.com/200x120" alt="Project 1">
+        <div class="project-content">
+          <h3>Project One</h3>
+          <p>A responsive website built using HTML, CSS, and JavaScript.</p>
+          <p class="project-links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </p>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://via.placeholder.com/200x120" alt="Project 2">
+        <div class="project-content">
+          <h3>Project Two</h3>
+          <p>A simple to-do app using React for task management.</p>
+          <p class="project-links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </p>
+        </div>
+      </article>
+    </section>
+    <section id="resume" class="resume container">
+      <h2>Resume</h2>
+      <p><a href="#">Download Resume</a></p>
+    </section>
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mail to:Divyanshu001@example.com">divyanshu001@example.com</a></p>
+      <p>Phone: +91-1234567890</p>
+      <form action="#" method="post" class="contact-form">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
